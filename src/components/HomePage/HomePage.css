@@ -72,3 +72,6 @@
     right: 15px;
     top: 50%;
 }
+#HomePage-next:hover {
+    cursor: pointer;
+}

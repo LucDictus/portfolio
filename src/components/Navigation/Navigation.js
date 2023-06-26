@@ -62,7 +62,7 @@ function Navigation() {
                             </div>
                         </a>
                     </div>
-                    <a>
+                    <a href='../AboutMe/AboutMe.js'>
                         <div id='Navigation-name'>
                             Luc Dictus <br></br>
                             <span>Front-End Dev.</span>
