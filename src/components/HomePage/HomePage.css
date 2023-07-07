@@ -38,6 +38,7 @@
 	-webkit-animation: slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @-webkit-keyframes HomePage-slide-left {
     0% {
       -webkit-transform: translateX(60px);
@@ -59,19 +60,18 @@
     }
 }
 
-#HomePage-name {
-    font-weight: 600;
-    width: 10px;
-    position: absolute;
-    left: 25px;
-    bottom: 25px;
-    line-height: 0.9;
-}
 #HomePage-next {
     position: absolute;
-    right: 15px;
+    right: 5%;
     top: 50%;
 }
 #HomePage-next:hover {
     cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    #HomePage-title {
+        scale: 1.5;
+        transform: translate(-15%, -65%);
+    }
 }

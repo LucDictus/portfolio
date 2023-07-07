@@ -15,8 +15,6 @@ function HomePage() {
                         <div id='HomePage-title-text'>PORT-FOLIO</div>
                         <div id='HomePage-title-background' className='HomePage-slide-left'></div>
                     </div>
-                    <div id='HomePage-name'>Luc Dictus</div>
-                    
                 </div>
                 
             </div>
