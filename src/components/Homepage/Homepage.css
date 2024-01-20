@@ -1,0 +1,43 @@
+@media only screen and (max-width: 768px) {
+    .Homepage-container {
+        width: 100%;
+    }
+
+    .Homepage-title {
+        width: 100%;
+        height: 88vh;
+        padding: 30px 25px 0 25px;
+    }
+    .Homepage-title h1 {
+        color: #0E0E0C;
+        font-family: Inter;
+        font-size: 32px;
+    }
+
+    .Homepage-projects-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Homepage-project-container {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        padding: 25px;
+        border: 1px solid #0E0E0C;
+    }
+    .Homepage-project-created {
+        color: #D7D6D4;
+        font-family: Inter;
+        font-size: 24px;
+        position: absolute;
+        bottom: 60px;
+    }
+    .Homepage-project-title {
+        color: #0E0E0C;
+        font-family: Inter;
+        font-size: 32px;
+        position: absolute;
+        bottom: 25px;
+    }
+}
