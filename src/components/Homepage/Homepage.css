@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 @media only screen and (max-width: 768px) {
     .Homepage-container {
         width: 100%;
@@ -8,10 +15,12 @@
         height: 88vh;
         padding: 30px 25px 0 25px;
     }
-    .Homepage-title h1 {
+    .Homepage-title-text {
         color: #0E0E0C;
-        font-family: Inter;
         font-size: 32px;
+        font-weight: 400;
+        opacity: 0;
+        animation: fade-in 1s ease-in-out forwards;
     }
 
     .Homepage-projects-container {
@@ -28,14 +37,12 @@
     }
     .Homepage-project-created {
         color: #D7D6D4;
-        font-family: Inter;
         font-size: 24px;
         position: absolute;
         bottom: 60px;
     }
     .Homepage-project-title {
         color: #0E0E0C;
-        font-family: Inter;
         font-size: 32px;
         position: absolute;
         bottom: 25px;

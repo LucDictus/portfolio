@@ -1,13 +1,18 @@
+import React, { useEffect } from 'react';
 import './Homepage.css';
 import { gsap } from "gsap";
 
 function Homepage() {
+    useEffect(() => {
+        gsap.fromTo('.Homepage-title-text', { opacity: 0, y: 150 }, { duration: 1, opacity: 1, y: 0, delay: 0.5 });
+      }, []);
+
   return (
     <div className="Homepage-container">
         <div className="Homepage-background-glow"></div>
 
         <div className="Homepage-title">
-            <h1>
+            <h1 className="Homepage-title-text">
                 Hé daar, ontdek mijn digitale creaties op mijn website. Benieuwd? Kom binnen en laat je inspireren!
             </h1>
         </div>
