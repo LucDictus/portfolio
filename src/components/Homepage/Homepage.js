@@ -41,7 +41,12 @@ function Homepage() {
 
         <div className="Homepage-footer">
             <div className="Homepage-footer-title">
-                Wil je iets creëren of wil je meer weten? Neem contact met mij op.
+                Wil je iets creëren of wil je meer weten?  <br></br> 
+                <a href='' className="Homepage-footer-contact-link">Neem contact met mij op.</a>
+            </div>
+            <div className="Homepage-footer-socials">
+                <a href="https://www.linkedin.com/in/luc-dictus-884394290/" target="_blank" className="Homepage-footer-social-link">LinkedIn</a>
+                <a href="https://github.com/LucDictus" target="_blank" className="Homepage-footer-social-link">Github</a>
             </div>
         </div>
     </div>

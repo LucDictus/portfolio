@@ -8,8 +8,7 @@ function App() {
     <div className="App">
       <Homepage />
 
-      {/* Add the NavigationMobileButton component here when width is less than 768px */}
-      {window.innerWidth < 768 ? <NavigationMobileButton /> : null}
+      <NavigationMobileButton />
 
     </div>
   );

@@ -4,8 +4,65 @@
     box-sizing: border-box;
 }
 
+.Homepage-container {
+    width: calc(100% - 300px);
+}
+.Homepage-title {
+    width: 80%;
+    padding: 110px 0 482px 55px;
+    color: #0E0E0C;
+}
+@media only screen and (max-width: 1100px) {
+    .Homepage-title {
+        padding: 110px 0 250px 55px;
+    }
+}
+.Homepage-title-text {
+    font-size: 48px;
+    animation: fade-in 1s ease-in-out forwards;
+}
+.Homepage-projects-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Homepage-project-container {
+    width: 50%;
+    position: relative;
+    aspect-ratio: 1; /* 1:1 aspect ratio */
+    border: 1px solid #0E0E0C;
+}
+.Homepage-footer {
+    width: 80%;
+    padding: 55px 0 55px 55px;
+}
+.Homepage-footer-title {
+    font-size: 32px;
+    color: #0E0E0C;
+}
+.Homepage-footer-contact-link {
+    font-size: 32px;
+    color: #0E0E0C;
+    text-decoration: none;
+    border-bottom: 2px solid #0E0E0C;
+}
+.Homepage-footer-socials {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+.Homepage-footer-social-link {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #0E0E0C;
+    border-radius: 50px;
+    color: #0E0E0C;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
     .Homepage-container {
         width: 100%;
     }
@@ -46,5 +103,37 @@
         font-size: 32px;
         position: absolute;
         bottom: 25px;
+    }
+    .Homepage-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 25px 85px 25px;
+    }
+    .Homepage-footer-title {
+        font-size: 28px;
+        color: #0E0E0C;
+    }
+    .Homepage-footer-contact-link {
+        font-size: 28px;
+        color: #0E0E0C;
+        text-decoration: none;
+        border-bottom: 1px solid #0E0E0C;
+    }
+    .Homepage-footer-socials {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+    }
+    .Homepage-footer-social-link {
+        width: 175px;
+        height: 50px;
+        border: 1px solid #0E0E0C;
+        border-radius: 50px;
+        color: #0E0E0C;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
