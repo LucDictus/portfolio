@@ -27,6 +27,7 @@
         width: 100px;
         padding: 0 1px;
         position: relative; /* Add this line */
+        cursor: pointer;
     }
     .Navigation-menu-items a::before {
         content: '';
