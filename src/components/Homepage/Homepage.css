@@ -45,6 +45,9 @@
     text-decoration: none;
     border-bottom: 2px solid #0E0E0C;
 }
+.Homepage-footer-contact-link:hover {
+    cursor: pointer;
+}
 .Homepage-footer-socials {
     margin-top: 50px;
     display: flex;
