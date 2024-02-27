@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Projects.css';
 import { gsap } from "gsap";
+import ProjectsList from './ProjectsList/ProjectsList.js';
 
 function Projects() {
   useEffect(() => {
@@ -17,27 +18,7 @@ function Projects() {
             </h1>
         </div>
 
-        <div className="Projects-projects-container">
-            <div className="Projects-project-container" id="project-one-background">
-                <div className="Projects-project-created">coded</div>
-                <div className="Projects-project-title">Street Fighter II</div>
-            </div>
-
-            <div className="Projects-project-container" id="project-two-background">
-                <div className="Projects-project-created">designed & coded</div>
-                <div className="Projects-project-title">Cinema App</div>
-            </div>
-
-            <div className="Projects-project-container" id="project-three-background">
-                <div className="Projects-project-created">coded</div>
-                <div className="Projects-project-title">Video call</div>
-            </div>
-
-            <div className="Projects-project-container" id="project-four-background">
-                <div className="Projects-project-created">branding & designed & coded</div>
-                <div className="Projects-project-title">Horloge app</div>
-            </div>
-        </div>
+        <ProjectsList />
     </div>
   );
 }

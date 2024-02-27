@@ -97,4 +97,7 @@
         bottom: 20px;
         right: 20px;
     }
+    .Navigation-progress-container {
+        display: none;
+    }
 }

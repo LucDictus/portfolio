@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
 import './Navigation.css';
+import ProgressCircle from "./Progressbar/ProgressCircle";
 
 const Navigation = ({ setActivePage }) => {
     useEffect(() => {
@@ -22,6 +22,8 @@ const Navigation = ({ setActivePage }) => {
         setActivePage(page);
     };
 
+
+
     return (
         <div className="Navigation-container">
             <button className="Navigation-mobile-button-open">Menu</button>
@@ -36,6 +38,10 @@ const Navigation = ({ setActivePage }) => {
                 </div>
 
                 <button className="Navigation-mobile-button-close">Close</button>
+            </div>
+
+            <div className="Navigation-progress-container">
+                <ProgressCircle />
             </div>
         </div>
     );

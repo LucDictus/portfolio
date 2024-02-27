@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 import { gsap } from "gsap";
+import ProjectsList from '../Projects/ProjectsList/ProjectsList';
 
 function Homepage({ setActivePage }) {
     useEffect(() => {
@@ -22,27 +23,7 @@ function Homepage({ setActivePage }) {
             </h1>
         </div>
 
-        <div className="Homepage-projects-container">
-            <div className="Homepage-project-container" id="project-one-background">
-                <div className="Homepage-project-created">coded</div>
-                <div className="Homepage-project-title">Street Fighter II</div>
-            </div>
-
-            <div className="Homepage-project-container" id="project-two-background">
-                <div className="Homepage-project-created">designed & coded</div>
-                <div className="Homepage-project-title">Cinema App</div>
-            </div>
-
-            <div className="Homepage-project-container" id="project-three-background">
-                <div className="Homepage-project-created">coded</div>
-                <div className="Homepage-project-title">Video call</div>
-            </div>
-
-            <div className="Homepage-project-container" id="project-four-background">
-                <div className="Homepage-project-created">branding & designed & coded</div>
-                <div className="Homepage-project-title">Horloge app</div>
-            </div>
-        </div>
+        <ProjectsList />
 
         <div className="Homepage-footer">
             <div className="Homepage-footer-title">
