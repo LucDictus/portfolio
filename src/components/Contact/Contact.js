@@ -1,21 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Contact.css';
-import emailjs from 'emailjs-com';
 
 function Contact() {
-  useEffect(() => {
-    emailjs.init('fONJOEzBaKx-2lwsC');
-  }, []);
-
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm('service_nxe1iaa', 'contact_form', e.target)
-      .then(() => {
-        console.log('SUCCESS!');
-      }, (error) => {
-        console.log('FAILED...', error);
-      });
-  };
 
   return (
     <div className="Contact-container">
@@ -28,7 +14,7 @@ function Contact() {
       </div>
 
       <div className="Contact-main-container">
-        <form id="contact-form" onSubmit={handleOnSubmit}>
+        <form id="contact-form">
           <input type="hidden" name="contact_number" />
 
           <input type="text" name="user_name" />
