@@ -48,5 +48,10 @@
     .About-content-skills-title {
         font-size: 32px;
     }
+    .About-content-skills-image-container {
+        width: 100%;
+        margin: 25px 0;
+        display: flex;
+    }
     
 }
