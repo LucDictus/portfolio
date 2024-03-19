@@ -12,10 +12,8 @@ function ProgressCircle() {
       progressElement.style.strokeDashoffset = 283 - progress;
   
       if (window.innerHeight + window.scrollY + 1 >= document.body.offsetHeight) {
-        
         scrollToTopElement.style.opacity = '1';
       } else {
-        console.log(progress, totalHeight, window.scrollY);
         scrollToTopElement.style.opacity = '0';
       }
     }
