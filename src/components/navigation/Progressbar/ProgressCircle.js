@@ -10,31 +10,34 @@ function ProgressCircle() {
       let progress = (window.scrollY / totalHeight) * 283;
       progress = Math.min(progress, 283);
       progressElement.style.strokeDashoffset = 283 - progress;
-
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  
+      if (window.innerHeight + window.scrollY + 1 >= document.body.offsetHeight) {
+        
         scrollToTopElement.style.opacity = '1';
       } else {
+        console.log(progress, totalHeight, window.scrollY);
         scrollToTopElement.style.opacity = '0';
       }
     }
-
+  
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
+  
     const scrollToTopElement = document.querySelector('.scroll-to-top');
     scrollToTopElement.addEventListener('click', scrollToTop);
-
+  
     updateProgressCircle();
     window.addEventListener('scroll', updateProgressCircle);
     window.addEventListener('resize', updateProgressCircle);
-
+  
     return () => {
       window.removeEventListener('scroll', updateProgressCircle);
       window.removeEventListener('resize', updateProgressCircle);
       scrollToTopElement.removeEventListener('click', scrollToTop);
     };
   }, []);
+  
 
   return (
     <div className="progress-circle-container">
