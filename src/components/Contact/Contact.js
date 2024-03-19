@@ -12,6 +12,8 @@ function Contact() {
   const submitButtonRef = useRef(null);
 
   useEffect(() => {
+    gsap.fromTo('.Contact-title-text', { opacity: 0, y: 150 }, { duration: 1, opacity: 1, y: 0, delay: 0.5 });
+
     if (isSubmitVisible) {
       gsap.from(submitButtonRef.current, {
         x: -50,
