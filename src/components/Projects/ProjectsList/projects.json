@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "image": "assets/images/StreetFighterCover.png",
+      "title": "Street Fighter II",
+      "created": "coded"
+    },
+    {
+      "image": "assets/images/CinemaAppCover.png",
+      "title": "Cinema App",
+      "created": "coded"
+    },
+    {
+      "image": "assets/images/VideoCallCover.png",
+      "title": "Video Call App",
+      "created": "coded"
+    },
+    {
+      "image": "assets/images/HorlogeAppCover.png",
+      "title": "Horloge App",
+      "created": "designed"
+    }
+  ]
+}
