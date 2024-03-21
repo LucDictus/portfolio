@@ -7,10 +7,12 @@
     position: relative;
     aspect-ratio: 1; /* 1:1 aspect ratio */
     border: 1px solid #0E0E0C;
+    background-size: cover;
 }
-.Projects-project-image {
-    width: 100%;
-    height: 100%;
+.Projects-project-container:nth-child(1), .Projects-project-container:nth-child(2) .Projects-project-title {
+    color: #EBE4DA;
+    /* create a small drop shadow */
+    text-shadow: 1px 1px 1px #000;
 }
 .Projects-project-title {
     bottom: 20px;
@@ -43,11 +45,5 @@
         font-size: 24px;
         position: absolute;
         bottom: 60px;
-    }
-    .Projects-project-title {
-        color: #0E0E0C;
-        font-size: 32px;
-        position: absolute;
-        bottom: 25px;
     }
 }
