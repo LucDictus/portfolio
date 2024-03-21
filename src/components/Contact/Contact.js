@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Contact.css';
-import swal from 'sweetalert';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -26,45 +25,23 @@ function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
+  
     if (name === 'user_name') setName(value);
     if (name === 'user_email') setEmail(value);
     if (name === 'message') setMessage(value);
-
+  
     if (name && email && message) {
       setIsSubmitVisible(true);
     } else {
       setIsSubmitVisible(false);
     }
   };
-
-  const handleSubmit = async (e) => {
+  
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Formspree endpoint for your form
-    const endpoint = 'https://formspree.io/f/your-form-id';
-
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-        }),
-      });
-
-      if (response.ok) {
-        swal("Goed gedaan!", "Bericht succesvol verzonden!", "success");
-      } else {
-        swal("Helaas!", "Het verzenden van het bericht is mislukt. Probeer het later opnieuw.", "error");
-      }
-    } catch (error) {
-      console.error('Fout bij het verzenden van het bericht:', error);
-      swal("Helaas!", "Er is een fout opgetreden tijdens het verzenden van het bericht. Probeer het later opnieuw.", "error");
+  
+    if (name && email && message) {
+      window.location.href = `mailto:lucdictus161@gmail.com?subject=Contact Form Submission from ${name}&body=${message}`;
     }
   };
 
