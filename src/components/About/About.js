@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './About.css';
 import { gsap } from "gsap";
+import Glow from '../Glow/Glow';
 
 function About() {
   useEffect(() => {
@@ -9,7 +10,9 @@ function About() {
 
   return (
     <div className="About-container">
-        <div className="background-glow"></div>
+        <div className="background-glow">
+            <Glow />
+        </div>
 
         <div className="About-title">
             <h1 className="About-title-text">
