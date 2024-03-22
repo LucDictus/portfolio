@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './Projects.css';
 import { gsap } from "gsap";
 import ProjectsList from './ProjectsList/ProjectsList.js';
+import Glow from '../Glow/Glow';
 
 function Projects() {
   useEffect(() => {
@@ -10,7 +11,9 @@ function Projects() {
 
   return (
     <div className="Projects-container">
-        <div className="background-glow"></div>
+        <div className="background-glow">
+          <Glow />
+        </div>
 
         <div className="Projects-title">
             <h1 className="Projects-title-text">

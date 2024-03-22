@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Homepage.css';
 import { gsap } from "gsap";
 import ProjectsList from '../Projects/ProjectsList/ProjectsList';
+import Glow from '../Glow/Glow';
 
 function Homepage({ setActivePage }) {
     useEffect(() => {
@@ -15,7 +16,9 @@ function Homepage({ setActivePage }) {
 
   return (
     <div className="Homepage-container">
-        <div className="background-glow"></div>
+        <div className="background-glow">
+            <Glow />
+        </div>
 
         <div className="Homepage-title">
             <h1 className="Homepage-title-text">

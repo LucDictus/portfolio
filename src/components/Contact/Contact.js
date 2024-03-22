@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Contact.css';
+import Glow from '../Glow/Glow';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -47,7 +48,9 @@ function Contact() {
 
   return (
     <div className="Contact-container">
-      <div className="background-glow"></div>
+      <div className="background-glow">
+        <Glow />
+      </div>
 
       <div className="Contact-title">
         <h1 className="Contact-title-text">
