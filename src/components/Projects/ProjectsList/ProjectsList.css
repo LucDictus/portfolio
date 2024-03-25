@@ -6,7 +6,6 @@
     width: 50%;
     position: relative;
     aspect-ratio: 1; /* 1:1 aspect ratio */
-    border: 1px solid #0E0E0C;
     background-size: cover;
 }
 .Projects-project-container:nth-child(1), .Projects-project-container:nth-child(2) .Projects-project-title {
