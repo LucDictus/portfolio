@@ -3,22 +3,58 @@
     {
       "image": "assets/images/StreetFighterCover.png",
       "title": "Street Fighter II",
-      "created": "coded"
+      "created": "coded",
+      "page": {
+        "page-image-1": "assets/images/StreetFighter1.png",
+        "page-image-2": "assets/images/StreetFighter2.png",
+        "page-text-1": "een heele leuke tekst",
+        "page-image-3": "assets/images/StreetFighter3.png",
+        "page-image-4": "assets/images/StreetFighter4.png",
+        "page-text-2": "nog een leuke tekst",
+        "page-image-5": "assets/images/StreetFighter5.png"
+      }
     },
     {
       "image": "assets/images/CinemaAppCover.png",
       "title": "Cinema App",
-      "created": "coded"
+      "created": "coded",
+      "page": {
+        "page-image-1": "assets/images/CinemaApp1.png",
+        "page-image-2": "assets/images/CinemaApp2.png",
+        "page-text-1": "een heele leuke tekst",
+        "page-image-3": "assets/images/CinemaApp3.png",
+        "page-image-4": "assets/images/CinemaApp4.png",
+        "page-text-2": "nog een leuke tekst",
+        "page-image-5": "assets/images/CinemaApp5.png"
+      }
     },
     {
       "image": "assets/images/VideoCallCover.png",
       "title": "Video Call App",
-      "created": "coded"
+      "created": "coded",
+      "page": {
+        "page-image-1": "assets/images/VideoCall1.png",
+        "page-image-2": "assets/images/VideoCall2.png",
+        "page-text-1": "een heele leuke tekst",
+        "page-image-3": "assets/images/VideoCall3.png",
+        "page-image-4": "assets/images/VideoCall4.png",
+        "page-text-2": "nog een leuke tekst",
+        "page-image-5": "assets/images/VideoCall5.png"
+      }
     },
     {
       "image": "assets/images/HorlogeAppCover.png",
       "title": "Horloge App",
-      "created": "designed"
+      "created": "designed",
+      "page": {
+        "page-image-1": "assets/images/HorlogeApp1.png",
+        "page-image-2": "assets/images/HorlogeApp2.png",
+        "page-text-1": "een heele leuke tekst",
+        "page-image-3": "assets/images/HorlogeApp3.png",
+        "page-image-4": "assets/images/HorlogeApp4.png",
+        "page-text-2": "nog een leuke tekst",
+        "page-image-5": "assets/images/HorlogeApp5.png"
+      }
     }
   ]
 }

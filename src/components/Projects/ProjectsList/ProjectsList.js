@@ -1,6 +1,5 @@
 import React from 'react';
 import './ProjectsList.css';
-import { gsap } from "gsap";
 import projectsData from './projects.json'; // import the JSON file
 
 function ProjectsList() {
