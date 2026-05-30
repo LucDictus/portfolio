@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: #fff;
+  pointer-events: all;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay.out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.name {
+  position: fixed;
+  z-index: 901;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(52px, 9vw, 108px);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: #0D0D0D;
+  text-align: left;
+  pointer-events: none;
+
+  transition:
+    top       1.0s cubic-bezier(0.76, 0, 0.24, 1),
+    left      1.0s cubic-bezier(0.76, 0, 0.24, 1),
+    transform 1.0s cubic-bezier(0.76, 0, 0.24, 1);
+
+  will-change: transform;
+}
+
+.name.toCorner {
+  top: 100%;
+  left: 20px;
+  transform: translate(0, calc(-100% - 20px));
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px) rotate(4deg);
+  transition:
+    opacity   0.4s cubic-bezier(0.34, 1.2, 0.64, 1),
+    transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.letter.in {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}

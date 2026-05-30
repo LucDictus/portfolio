@@ -1,0 +1,50 @@
+.wrap {
+  position: relative;
+  width: min(600px, 80vw);
+}
+
+.eyebrow {
+  position: absolute;
+  top: -26px; left: 0;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 18px; height: 0.5px;
+  background: var(--ink3);
+}
+
+/* SVG draw-in animation — triggered by .animate class */
+.svg :global(.dline) {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.svg.animate :global(.dline) {
+  animation: drawLine 0.5s var(--ease) forwards;
+}
+
+.svg :global(.dnode) {
+  opacity: 0;
+  transform-origin: center;
+}
+
+.svg.animate :global(.dnode) {
+  animation: popNode 0.32s var(--spring) forwards;
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes popNode {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,80 @@
+.section {
+  border-bottom: 1px solid rgba(13,13,13,0.09);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 48px 44px 36px;
+  border-bottom: 1px solid rgba(13,13,13,0.09);
+}
+
+.title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.all {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #AEAAA4;
+  transition: color 0.2s;
+}
+.all:hover { color: #0D0D0D; }
+
+/* ── Project row ── */
+.row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 22px 44px;
+  border-bottom: 1px solid rgba(13,13,13,0.09);
+  cursor: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: background 0.2s,
+              opacity 0.6s cubic-bezier(0.16,1,0.3,1),
+              transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.row:last-child { border-bottom: none; }
+.row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.row:hover { background: #F5F5F3; }
+.row:hover .arrow {
+  transform: translate(4px, -4px);
+  color: #0D0D0D;
+}
+
+.num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #C8B89A;
+}
+
+.name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  color: #0D0D0D;
+}
+
+.stack {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  color: #AEAAA4;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #AEAAA4;
+  transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), color 0.2s;
+}

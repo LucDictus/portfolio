@@ -1,0 +1,102 @@
+/* ─── Hero layout ────────────────────────────────── */
+.hero {
+  height: 100svh;
+  min-height: 640px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-bottom: 1px solid rgba(13,13,13,0.09);
+  overflow: hidden;
+}
+
+/* ─── Centre (diagram zone) ──────────────────────── */
+.centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 80px 0;
+}
+
+/* Clip-reveal mask — slides right to left on entry */
+.diagramMask {
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.1s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.diagramMask.revealed {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* ─── Floor (name + meta) ────────────────────────── */
+.floor {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 44px 40px;
+  border-top: 1px solid rgba(13,13,13,0.09);
+}
+
+/* Staggered word reveal */
+.wordLine {
+  display: block;
+  overflow: hidden;   /* clips the translateY slide-up */
+}
+
+.word {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.word.visible { transform: translateY(0); }
+
+.name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(58px, 9.5vw, 116px);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+}
+
+.nameItalic { font-style: italic; color: #2D4A3E; }
+
+/* Right meta */
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+.metaLine {
+  transform: translateY(100%);
+  transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.metaLine.visible { transform: translateY(0); }
+
+.role {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #AEAAA4;
+}
+
+.scrollCue {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #AEAAA4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bounce {
+  display: inline-block;
+  animation: bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
