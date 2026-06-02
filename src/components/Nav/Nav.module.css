@@ -2,9 +2,9 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
-  padding: 28px 44px;
+  padding: 24px 44px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid transparent;
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
@@ -17,27 +17,21 @@
 }
 
 .logo {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 13px;
-  letter-spacing: 0.01em;
-  color: #0D0D0D;
-  line-height: 1;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
 }
 
 .links {
   display: flex;
   gap: 28px;
   list-style: none;
-  margin-top: 2px;
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: opacity 0.4s, transform 0.4s;
-}
-
-/* Links komen in zodra visible */
-.nav.visible .links {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .links a {
@@ -45,9 +39,13 @@
   font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #6A6560;
+  color: var(--ink3);
   position: relative;
   transition: color 0.2s;
+}
+
+.links a.active {
+  color: var(--ink);
 }
 
 .links a::after {
@@ -55,9 +53,10 @@
   position: absolute;
   bottom: -2px; left: 0;
   width: 0; height: 0.5px;
-  background: #0D0D0D;
+  background: var(--ink);
   transition: width 0.25s cubic-bezier(0.16,1,0.3,1);
 }
 
-.links a:hover { color: #0D0D0D; }
+.links a:hover { color: var(--ink); }
 .links a:hover::after { width: 100%; }
+.links a.active::after { width: 100%; }
